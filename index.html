@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Metric Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Metric Converter</h1>
+      <p class="subtitle">Convert lengths, volumes, masses, areas and temperatures — fast & responsive.</p>
+    </header>
+
+    <section class="card">
+      <div class="controls">
+        <label>
+          Category
+          <select id="category"></select>
+        </label>
+
+        <div class="row">
+          <label class="unit">
+            From
+            <select id="fromUnit"></select>
+          </label>
+
+          <div class="swap-col">
+            <button id="swapBtn" title="Swap units">⇄</button>
+          </div>
+
+          <label class="unit">
+            To
+            <select id="toUnit"></select>
+          </label>
+        </div>
+
+        <label>
+          Value
+          <input id="inputValue" type="number" step="any" placeholder="Enter a number" />
+        </label>
+
+        <div class="actions">
+          <button id="convertBtn" class="primary">Convert</button>
+          <button id="resetBtn" class="ghost">Reset</button>
+        </div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="value" id="resultValue">—</div>
+        <div class="meta" id="resultMeta"></div>
+      </div>
+    </section>
+
+    <section class="quick">
+      <h3>Quick conversions</h3>
+      <div class="quick-grid" id="quickGrid"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Made with ♥ — add more units easily in script.js</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
